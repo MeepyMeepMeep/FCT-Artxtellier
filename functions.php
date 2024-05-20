@@ -1,0 +1,1 @@
+<!-- Funciones que habilitarán ciertas funcionalidades en el tema de Wordpress  -->

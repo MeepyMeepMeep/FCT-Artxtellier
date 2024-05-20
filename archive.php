@@ -1,0 +1,1 @@
+<!-- Plantilla que se visualizará a la hora de visualizar todos los posts existentes. -->

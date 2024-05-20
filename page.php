@@ -1,0 +1,1 @@
+<!-- Plantilla que se visualizará en las páginas estáticas. -->

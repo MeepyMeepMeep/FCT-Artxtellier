@@ -1,0 +1,1 @@
+<!-- Plantilla que se visualizará a la hora de mostrar resultados de búsqueda. -->

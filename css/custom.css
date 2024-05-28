@@ -1,6 +1,192 @@
-/**
+/*
 
 Estilos CSS personalizados. Estos estilos deben de sobreescribir otros existentes (si los hay).
+Para que no coincidan con otros se distinguiran con [at--].
 
-**/
+*/
 
+
+/* 
+----------------
+Imports 
+----------------
+*/
+@import url('https://fonts.googleapis.com/css2?family=Jua&family=M+PLUS+Rounded+1c&display=swap');
+
+
+/* 
+----------------
+Generales 
+----------------
+*/
+
+*{
+    box-sizing: border-box;
+}
+
+:root {
+    --main-font-color: #000;
+    --secondary-font-color: #fff;
+    --tertiary-font-color: #4f4f4f;
+    --palette-main-color:#589D7D;
+    --palette-secondary-color:#8FC0A9;
+}
+
+.at--center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.at--hcenter{
+    display: flex;
+    align-items: center;
+}
+
+.palette-main{
+    background-color: var(--palette-main-color);
+}
+.palette-secondary{
+    background-color: var(--palette-secondary-color);
+}
+
+/* 
+----------------
+Fuentes 
+----------------
+*/
+
+/*- JUA -*/
+.jua{
+    font-family: "Jua", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .jua--post__title {
+    font-size: 48px;
+    color: var(--main-font-color);
+  }
+
+/*- M PLUS Round 1c -*/
+.mplusr1c{
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.mplusr1c--subtitulos {
+    font-size: 36pt;
+    color: var(--main-font-color);
+}
+
+
+.mplusr1c--footer {
+    font-size: 24px;
+    color: var(--secondary-font-color);
+}
+
+.mplusr1c--contenida {
+    font-size: 16px;
+    color: var(--tertiary-font-color);
+}
+
+.mplusr1c--texto{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--main-font-color);
+}
+
+.mplusr1c--meta{
+    font-size: 16pt;
+    color: var(--tertiary-font-color);
+}
+
+.mplusr1c--username{
+    font-size: 32px;
+    color: var(--tertiary-font-color);
+}
+
+/*- Tahoma -*/
+.tahoma--user__text{
+    font-family: 'Tahoma', Segoe UI, sans-serif;
+    font-size: 20px;
+}
+
+/* 
+----------------
+Header 
+----------------
+*/
+
+header{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    background-color: var(--palette-main-color);
+
+}
+
+.at--headernav{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.at--headernav li a{
+    padding:0;
+    margin-right: 20px;
+    text-decoration: none;
+    font-size: 24px;
+    color: var(--palette-secondary-color);
+    text-shadow:2px 1px 0px #000;
+
+}
+
+.at--searchbar{
+    height: 36px;
+    width: 244px;
+    padding-left: 20px;
+    background-color: var(--secondary-font-color);
+    border-radius: 10px;
+    box-shadow: 4px 3px 0px #000;
+    border: solid 1px #fff;
+}
+
+.at--searchbar:focus{
+    outline: none;
+}
+
+
+.at--button__header{
+    height: 38px;
+    width: 110px;
+    background-color: var(--secondary-font-color);
+    border-radius: 10px;
+    border: none;
+    box-shadow: 4px 3px 0px #000;
+    cursor: pointer;
+}
+
+.at--button__header a{
+    text-decoration: none;
+}
+
+
+
+
+
+/*
+----------------
+Footer
+----------------
+*/
+
+footer{
+    width: 100%;
+    height: 248px;
+    background-color: var(--palette-main-color);
+    
+}

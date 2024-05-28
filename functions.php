@@ -42,7 +42,8 @@ register_nav_menus(
     //Establecemos los menús del tema
     array(
         'menu-header' => 'Header menu',
-        'menu-footer' => 'Footer menu',
+        'menu-footer-1' => 'Footer menu 1',
+        'menu-footer-2' => 'Footer menu 2',
     )
 );
 

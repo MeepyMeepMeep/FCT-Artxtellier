@@ -24,10 +24,10 @@ document.addEventListener('DOMContentLoaded', function(){
 window.addEventListener("load", function() {
     //Definimos paletas
     const paletas = [
-        {primario:'#EE7674', secundario: '#EDB2B1'},
-        {primario:'#68B0AB', secundario: '#95CBC7'},
-        {primario:'#589D7D', secundario: '#8FC0A9'},
-        {primario:'#F4C766', secundario: '#F5DEAD'}
+        {primario:'#EE7674', secundario: '#EDB2B1', terciario: '#FACECD'},
+        {primario:'#68B0AB', secundario: '#95CBC7', terciario: '#BBDDDB'},
+        {primario:'#589D7D', secundario: '#8FC0A9', terciario: '#B1D3C3'},
+        {primario:'#F4C766', secundario: '#F5DEAD', terciario: '#F8E9C9'}
     ];
 
     //Randomizamos
@@ -37,5 +37,6 @@ window.addEventListener("load", function() {
     //Modificamos las variables
     document.documentElement.style.setProperty('--palette-main-color', paletaSeleccionada.primario);
     document.documentElement.style.setProperty('--palette-secondary-color', paletaSeleccionada.secundario);
+    document.documentElement.style.setProperty('--palette-tertiary-color', paletaSeleccionada.terciario);
 
 });

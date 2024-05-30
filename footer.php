@@ -21,8 +21,11 @@
                 );?>
             
         </div>
-        <hr class="at-footer__hr"/>
-        <p class="at--footer__credits mplusr1c">Made with <i class="fa-solid fa-heart"></i> in Wordpress by <a href="https://github.com/MeepyMeepMeep/FCT-Artxtellier">MeepyMeepMeep</a></p> 
+
+    </div>  
+    <div class="at--footer2">
+        <p class="text-center mplusr1c">Made with <i class="fa-solid fa-heart"></i> in Wordpress by 
+        <a href="https://github.com/MeepyMeepMeep/FCT-Artxtellier">MeepyMeepMeep</a></p> 
     </div>
 </footer>
 

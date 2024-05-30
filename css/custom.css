@@ -38,12 +38,28 @@ body{
     min-height: 100vh;
 }
 
+h1, h2, h3, h4{
+    font-family: "Jua", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 header{
     margin-bottom:auto;
 }
 
 footer{
     margin-top: auto;
+}
+
+.at--centered_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.at--centered_column{
+    padding: 70px 400px;
 }
 
 
@@ -135,6 +151,7 @@ Header
 
 
 .at--button__header{
+    margin-left: 20px;
     height: 38px;
     width: 110px;
     background-color: var(--secondary-font-color);
@@ -164,7 +181,7 @@ Footer
 */
 
 .at--footer{
-    height: 248px;
+    height: 208px;
     background-color: var(--palette-main-color);
     color: #fff;
 }
@@ -204,21 +221,43 @@ Footer
     text-shadow:2px 1px 0px #fff;
 }
 
-.at-footer__hr{
-    border: solid 1px #fff;
-    margin: 0px 0px 5px 0px;
-    padding:0;
+
+.at--footer2{
+    margin-top: 2px;
+    height: 40px;
+    background-color: var(--palette-main-color);
+    color: #fff;
+    padding: 8px;
 }
 
-.at--footer__credits{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: small;
-    font-weight: 400;
-
+.at--footer2 a{
+    text-decoration: none;
 }
 
-.at--container__tiny{
-    min-height: calc(100vh - 248px);
+
+/*
+----------------
+404
+----------------
+*/
+
+.at--404img{
+    height: 277px;
+    width: 277px;
+    margin-right: 120px;
+}
+
+.at--404text{
+    display: block;
+}
+
+/*
+----------------
+Information
+----------------
+*/
+
+.at--info__logo{
+    width: 557px;
+    height: auto;
 }

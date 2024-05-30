@@ -40,3 +40,5 @@ window.addEventListener("load", function() {
     document.documentElement.style.setProperty('--palette-tertiary-color', paletaSeleccionada.terciario);
 
 });
+
+//

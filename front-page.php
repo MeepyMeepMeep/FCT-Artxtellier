@@ -33,39 +33,20 @@
             if ($posts_recientes -> have_posts()):
                 while ($posts_recientes -> have_posts()): $posts_recientes ->the_post();
 
-                /* Nos interesa que el post contenga imágenes */
-                $content = get_the_content( );
-                $with_images = strpos($content, '<img') !==false;
+                $image = get_the_post_thumbnail(get_the_ID(), 'large');
+                $title = get_the_title();
 
-                if ($with_images):
-                    /* Creamos un array de imágenes disponibles en un post 
-                    para elegir la primera (Principal) y renderizarla*/ 
-                    $images = get_posts(array(
-                        'post_type' => 'attachment',
-                        'posts_per_page' => 1,
-                        'post_parent' => get_the_ID(),
-                        'post_mime_type' => 'image',
-                    ));
-                    
-        
         ?>
-
-        <div class="at--miniatura">
-            <a href="<?php the_permalink(); ?>">
-                <?php
-
-                    if (!empty($images)):
-                        
-                        echo wp_get_attachment_image( $images[0] -> ID, 'large');
-                        
-                    endif;
-                ?>
-                <div class="jua at--author__overlay">
-                    <p> <?php echo get_the_author() ?> </p>
-                </div>               
-            </a>
-        </div>
-
+        <?php if(has_post_thumbnail()):?>
+            <div class="at--miniatura">
+                <a href="<?php the_permalink(); ?>">
+                    <?php echo $image ?>;
+                    <div class="jua at--author__overlay">
+                        <p> <?php echo get_the_author() ?> </p>
+                    </div>               
+                </a>
+            </div>
+  
         <?php
             endif;
             endwhile;

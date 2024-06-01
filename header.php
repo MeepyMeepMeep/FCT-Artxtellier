@@ -27,7 +27,7 @@
             <?php get_search_form() ?>
         </div>
         <div class="at--account__container">
-            <button type="button" class="at--button__header"><a href="http://example.com" class="mplusr1c">Sign In</a></button>
+            <button type="button" class="at--button__header"><a href="http://artxtellier.local/access/" class="mplusr1c">Sign In</a></button>
         </div>
     </div>
 

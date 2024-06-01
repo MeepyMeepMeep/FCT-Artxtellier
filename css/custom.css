@@ -89,6 +89,7 @@ Header
 ----------------
 */
 
+
 .at--header__container{    
     display: flex;
     justify-content: space-between;
@@ -96,6 +97,7 @@ Header
     padding: 10px 105px;
     height: 100px;
     background-color: var(--palette-main-color);
+    margin-bottom: 20px;
 }
 
 .at--left__container{
@@ -181,6 +183,7 @@ Footer
 */
 
 .at--footer{
+    margin-top: 20px;
     height: 208px;
     background-color: var(--palette-main-color);
     color: #fff;
@@ -261,3 +264,96 @@ Information
     width: 557px;
     height: auto;
 }
+
+/*
+----------------
+Front-page, Latest, Explore, Search
+----------------
+*/
+
+.at--container{
+    margin: 35px 30px 30px 30px;
+}
+
+.at--grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    gap: 20px;
+    margin-top: 45px;
+    margin-bottom: 45px;
+    
+}
+
+.at--miniatura{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+.at--miniatura img{
+    width: 390px;
+    height: 390px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.at--miniatura img:hover{
+    width: 390px;
+    height: 390px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 4px 4px 2px #4f4f4f;
+    transition: 0.2s;
+}
+.at--miniatura a{
+    text-decoration: none;
+}
+
+.at--author__overlay{
+    position: absolute;
+    margin-left: 25px;
+    padding: 0;
+
+}
+
+.at--author__overlay p{
+    color: #000;
+    font-size: 28px;
+    opacity: 0;
+    background-color: #fff;
+    transform: translateY(-65px);
+    border-radius: 10px;
+    padding: 1px 6px;
+
+}
+
+.at--miniatura:hover .at--author__overlay p{
+    opacity: 1;
+    transition: 0.2s;
+
+}
+
+.at--button__join{
+    justify-content: center;
+    margin-top: 20px;
+    height: 38px;
+    width: 110px;
+    background-color: var(--palette-main-color);
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    box-shadow: 4px 3px 0px #000;
+}
+
+.at--button__join:hover{
+    background-color: var(--palette-secondary-color);
+}
+
+/*
+----------------
+Author.php
+----------------
+*/

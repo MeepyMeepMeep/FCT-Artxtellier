@@ -230,11 +230,19 @@ Footer
     height: 40px;
     background-color: var(--palette-main-color);
     color: #fff;
-    padding: 8px;
+}
+
+.at--footer2 p{   
+    padding-top: 8px;
 }
 
 .at--footer2 a{
     text-decoration: none;
+    color: #fff;
+}
+
+.at--footer2 a:hover{
+    color: var(--palette-tertiary-color);
 }
 
 
@@ -301,9 +309,6 @@ Front-page, Latest, Explore, Search
 }
 
 .at--miniatura img:hover{
-    width: 390px;
-    height: 390px;
-    object-fit: cover;
     border-radius: 10px;
     box-shadow: 4px 4px 2px #4f4f4f;
     transition: 0.2s;
@@ -354,6 +359,46 @@ Front-page, Latest, Explore, Search
 
 /*
 ----------------
-Author.php
+Single.php (posts)
 ----------------
 */
+
+.at--post__container{    
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.at--posttitle{
+    display: flex;
+    align-items: baseline;
+    padding: 0;
+}
+.at--posttitle p{
+    margin-left: 10px;
+}
+
+.at--postimage__container{
+    width: 850px;
+    height: 850px;
+    overflow: hidden;    
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+
+}
+
+.at--postimage__container img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.at--postcontent__container{
+    display: block;
+    width: 50%;
+    height: 50%;
+}

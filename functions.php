@@ -34,6 +34,7 @@ add_action('wp_enqueue_scripts', 'cargar_scripts');
 
 //Tema
 add_theme_support('menus', 'custom logo');
+add_theme_support( 'post-thumbnails' );
 
 
 

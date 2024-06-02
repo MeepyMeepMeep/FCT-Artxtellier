@@ -40,7 +40,7 @@
         <?php if(has_post_thumbnail()):?>
             <div class="at--miniatura">
                 <a href="<?php the_permalink(); ?>">
-                    <?php echo $image ?>;
+                    <?php echo $image ?>
                     <div class="jua at--author__overlay">
                         <p> <?php echo get_the_author() ?> </p>
                     </div>               

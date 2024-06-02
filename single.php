@@ -11,7 +11,7 @@
                 $title = get_the_title();
                 $description = get_the_content();
                 $author = get_the_author();
-                $author_url = get_the_author_url();
+                $author_url = get_the_author_posts_link();
                 $date = get_the_date();
 
 ?>
@@ -23,7 +23,7 @@
                 <div class="at--postcontent__container">
                     <div class="at--posttitle">
                         <h2><?php echo $title ?></h2>
-                        <p class="mplusr1c"> by <a href="<?php echo $author_url?>"><?php echo $author ?></a></p>
+                        <p class="mplusr1c"> by <?php echo $author_url?></a></p>
                     </div>
                     <hr>
                     <p class="mplusr1c"><?php echo $description ?></p>

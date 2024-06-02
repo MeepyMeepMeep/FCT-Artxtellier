@@ -111,7 +111,18 @@ Header
 }
 
 .at--account__container{
+    display: flex;
+    align-items: center;
     margin-left: auto;
+}
+
+.at--account_link{
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 24px;
+    color: var(--secondary-font-color);
+    text-shadow:2px 1px 0px #000;
+
 }
 
 .at--headernav{
@@ -287,18 +298,10 @@ Front-page, Latest, Explore, Search
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-items: center;
-    gap: 20px;
+    gap: 40px;
     margin-top: 45px;
     margin-bottom: 45px;
     
-}
-
-.at--miniatura{
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    margin: 0;
-    padding: 0;
 }
 
 .at--miniatura img{

@@ -1,5 +1,7 @@
 <footer>
-    <div class="at--footer">
+
+
+<div class="at--footer">
         <div class="at--footer__container">
                 <?php
                     if ( function_exists( 'the_custom_logo' ) ) {
@@ -21,8 +23,7 @@
                 );?>
             
         </div>
-
-    </div>  
+</div>  
     <div class="at--footer2">
         <p class="text-center mplusr1c">Made with <i class="fa-solid fa-heart"></i> in Wordpress by 
         <a href="https://github.com/MeepyMeepMeep/FCT-Artxtellier">MeepyMeepMeep</a></p> 

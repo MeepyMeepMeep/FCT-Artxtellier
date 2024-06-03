@@ -32,7 +32,7 @@ Generales
     --tertiary-font-color: #4f4f4f;
 }
 
-body{
+.at--information__body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -56,6 +56,8 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .at--centered_column{
@@ -92,12 +94,18 @@ Header
 
 .at--header__container{    
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 10px 105px;
+    width: 100%;
     height: 100px;
     background-color: var(--palette-main-color);
-    margin-bottom: 20px;
+}
+
+.at--header-elements__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
 }
 
 .at--left__container{
@@ -127,8 +135,9 @@ Header
 
 .at--headernav{
     display: flex;
+    flex-wrap: wrap;
     list-style-type: none;
-    margin-left: 70px;
+    margin-left: 50px;
     margin-bottom: 0;
     padding: 0;
 }
@@ -194,6 +203,10 @@ Footer
 */
 
 .at--footer{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
     margin-top: 20px;
     height: 208px;
     background-color: var(--palette-main-color);
@@ -202,19 +215,20 @@ Footer
 
 .at--footer__container{
     display: flex;
-    justify-content: space-between;
+    width: 40%;
     align-items: center;
-    padding: 55px 555px;
-    margin: auto;
-    background-color: var(--palette-main-color);
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .at--footer__container img{
     height: auto;
     width: 251px;
+    margin-bottom: 10px;
 }
 
 .at--footernav{
+    display: block;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -296,17 +310,17 @@ Front-page, Latest, Explore, Search
 
 .at--grid{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     justify-items: center;
+    align-items: center;
     gap: 40px;
     margin-top: 45px;
     margin-bottom: 45px;
-    
 }
 
 .at--miniatura img{
-    width: 390px;
-    height: 390px;
+    width: 350px;
+    height: 350px;
     object-fit: cover;
     border-radius: 10px;
 }
@@ -401,6 +415,31 @@ Single.php (posts)
 }
 
 .at--postcontent__container{
+    display: block;
+    width: 50%;
+    height: 50%;
+}
+
+/*
+Author.php
+*/
+
+.at--profile-header{
+    height: 325px;
+    background-color: var(--palette-secondary-color);
+    margin-top: 0;
+    box-shadow: 0px 5px 6px #4f4f4f;
+}
+
+.at--profile-header__content{    
+    display: flex;
+    width: 55%;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.at--profile-header__info{
     display: block;
     width: 50%;
     height: 50%;

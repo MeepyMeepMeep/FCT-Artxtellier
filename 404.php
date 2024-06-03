@@ -1,7 +1,6 @@
 <!-- Plantilla que se visualizará a la hora de surgir errores 404. -->
 
 <?php get_header();?>
-
     <div class="at--centered_container">
         <img src="<?php echo get_template_directory_uri(); ?>/img/artxtellier-logo512x512-black.png" class="at--404img"/>
         <div class="at--404text">

@@ -6,7 +6,7 @@
     <title><?php the_title();?></title>
     <?php wp_head();?>
 </head>
-<body>
+<body <?php body_class();?>>
 
 <header>
 
@@ -14,9 +14,9 @@
         <div class="at--header-elements__container">
             <div class="at--left__container">
                 <?php
-                    if ( function_exists( 'the_custom_logo' ) ) {
+                    if ( function_exists( 'the_custom_logo' )) :
                         the_custom_logo();
-                    }
+                endif;
                 ?>
 
                 <?php wp_nav_menu(

@@ -4,9 +4,10 @@
 <div class="at--footer">
         <div class="at--footer__container">
                 <?php
-                    if ( function_exists( 'the_custom_logo' ) ) {
+                    if ( function_exists( 'the_custom_logo' )):
                         the_custom_logo();
-                }?>
+                endif;
+                ?>
 
                 <?php wp_nav_menu(
                     array(

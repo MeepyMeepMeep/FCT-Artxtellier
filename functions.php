@@ -63,6 +63,16 @@ function logo_sitio() {
 }
 add_action( 'after_setup_theme', 'logo_sitio' );
 
+/*Anadir clase a body en ciertas paginas cortas de contenido para 
+situar el footer en la parte de abajo de la pantalla*/
+function clase_body( $clase ){
+  if (is_404() || is_page_template( 'template-information.php' )){
+    $clase[] = 'at--information__body';
+  }
+  return $clase;
+}
+add_filter( 'body_class', 'clase_body' );
+
 /*
 -----------------
 Código de terceros

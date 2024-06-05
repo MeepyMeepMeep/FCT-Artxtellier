@@ -75,7 +75,39 @@ add_filter( 'body_class', 'clase_body' );
 
 /*
 -----------------
-Código de terceros
+Pagina de acceso
+-----------------
+*/
+
+function access_artxtellier_logo() { ?>
+<style type="text/css">
+    #login h1 a, .login h1 a {
+        background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/img/artxtellier-logo355x70-black.png);
+        height:70px;
+        width:320px;
+        background-size: 320px 65px;
+        background-repeat: no-repeat;
+        padding-bottom: 10px;
+        margin-bottom: 0px;
+      }
+  </style>
+<?php }
+add_action( 'login_enqueue_scripts', 'access_artxtellier_logo' );
+
+function access_artxtellier_logo_url() {
+    return home_url();
+}
+add_filter( 'login_headerurl', 'access_artxtellier_logo_url' );
+
+function artxtellier_login_stylesheet() {
+    wp_enqueue_style( 'custom-login-css', get_stylesheet_directory_uri() . '/css/custom-login.css' );
+    wp_enqueue_script( 'custom-login-js', get_stylesheet_directory_uri() . '/js/custom.js' );
+}
+add_action( 'login_enqueue_scripts', 'artxtellier_login_stylesheet' );
+
+/*
+-----------------
+Codigo de terceros
 -----------------
 */
 

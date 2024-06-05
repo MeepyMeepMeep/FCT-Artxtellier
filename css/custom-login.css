@@ -1,0 +1,56 @@
+/*
+Hoja de estilos para personalizar la pagina de acceso/registro
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Jua&family=M+PLUS+Rounded+1c&display=swap');
+
+
+body.login{
+    background-color: var(--palette-secondary-color);
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+input#user_login:focus,
+input#user_pass:focus{
+    outline-color: var(--palette-main-color);
+}
+
+.wp-hide-pw .dashicons{
+    color: var(--palette-main-color);
+}
+
+body.login input#wp-submit{
+    background: var(--palette-main-color);
+    border-color: var(--palette-main-color);
+}
+
+body.login input#wp-submit:hover{
+    background: var(--palette-secondary-color);
+    border-color: var(--palette-secondary-color);
+    box-shadow:3px 2px 0px #000;
+}
+
+body.login div#login p#backtoblog a {
+    display: none;
+}
+
+.login #backtoblog a:hover, 
+.login #nav a:hover, 
+.login h1 a:hover {
+    color: #fff;
+}
+.login #backtoblog a, 
+.login #nav a, 
+.login h1 a {
+    color: #3C434A;
+}
+
+a.wp-login-register,
+a.wp-login-lost-password,
+a.privacy-policy-link{
+    color: #3C434A;
+}
+
+

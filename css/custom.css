@@ -54,6 +54,7 @@ footer{
 }
 
 .at--centered_container{
+    margin-top: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -512,4 +513,38 @@ Author.php
 .at--profile-header__info p a:hover{
     text-decoration: none;
     color:#fff;
+}
+
+/*
+
+Search.php
+
+*/
+
+.at--search__container{
+
+    width: 80%;
+}
+
+.at--search__grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    justify-items: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 45px;
+    margin-bottom: 45px;
+}
+
+.at--search__miniatura img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.at--search__miniatura img:hover{
+    border-radius: 10px;
+    box-shadow: 4px 4px 2px #4f4f4f;
+    transition: 0.2s;
 }

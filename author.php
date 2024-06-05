@@ -25,39 +25,42 @@
                 </div>
             </div>
         </div>
+        <div class="at--centered__container">
+            <div class="at--author-grid__container">
+                <div class="at--grid__container">
+                    <?php
+                    if (have_posts()) :
 
-        <div class="at--grid__container">
-            <?php
-            if (have_posts()) :
+                        $paged = get_query_var('paged');
+                        $author_id = $author-> ID;
 
-                $paged = get_query_var('paged');
-                $author_id = $author-> ID;
+                        $posts = array(
+                            'author' => $author_id,
+                            'post_status' => 'publish',
+                            'posts_per_page' => 12,
+                            'orderby' => 'date',
+                            'order' => 'DESC',
+                            'paged' => $paged,
+                        );
 
-                $posts = array(
-                    'author' => $author_id,
-                    'post_status' => 'publish',
-                    'posts_per_page' => 12,
-                    'orderby' => 'date',
-                    'order' => 'DESC',
-                    'paged' => $paged,
-                );
+                        $author_posts = new WP_Query( $posts );
 
-                $author_posts = new WP_Query( $posts );
+                        if ( $author_posts->have_posts() ) :
+                            while ( $author_posts->have_posts() ) : $author_posts->the_post();
 
-                if ( $author_posts->have_posts() ) :
-                    while ( $author_posts->have_posts() ) : $author_posts->the_post();
-
-                        if ( has_post_thumbnail() ) :?>
-                            <div class="at--thumbnail">
-                                <a href="<?php the_permalink(); ?>">
-                                    <?php the_post_thumbnail(get_the_ID(), 'large');?>
-                                    <div class="jua at--author__overlay">
-                                        <p> <?php the_title() ?> </p>
-                                    </div>               
-                                </a>
-                            </div>
-                        <?php endif;
-                    endwhile;?>
+                                if ( has_post_thumbnail() ) :?>
+                                    <div class="at--thumbnail">
+                                        <a href="<?php the_permalink(); ?>">
+                                            <?php the_post_thumbnail(get_the_ID(), 'large');?>
+                                            <div class="jua at--author__overlay">
+                                                <p> <?php the_title() ?> </p>
+                                            </div>               
+                                        </a>
+                                    </div>
+                                <?php endif;
+                            endwhile;?>
+                </div>
+            </div>    
         </div>
 
         <div class="at--centered__container">

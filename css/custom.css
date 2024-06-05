@@ -368,6 +368,7 @@ Front-page, Latest, Explore, Search
 .at--author__overlay{
     position: absolute;
     margin-left: 25px;
+    max-width: 300px;
     padding: 0;
 
 }
@@ -510,6 +511,10 @@ Author.php
 .at--profile-header__info p a:hover{
     text-decoration: none;
     color:#fff;
+}
+
+.at--author-grid__container{
+    width: 70%;
 }
 
 /*

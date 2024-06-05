@@ -29,7 +29,7 @@
                     endif;?>
                     <div class="at--posttitle">
                         <h2><?php echo $title ?></h2>
-                        <p class="mplusr1c"> by <?php echo $author_url?></a></p>
+                        <p class="mplusr1c"> by <?php echo $author_url?></p>
                     </div>
                     <hr>
                     <p class="mplusr1c"><?php echo $description ?></p>

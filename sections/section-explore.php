@@ -13,7 +13,7 @@
             $posts = array(
                 'post_type' => 'post',
                 'post_status' => 'publish',
-                'posts_per_page' => 12,
+                'posts_per_page' => 24,
                 'orderby' => 'rand',
                 'order' => 'DESC',
             );
@@ -37,20 +37,18 @@
                 </a>
             </div>
   
-        <?php endif; ?>
-            <?php endwhile;
-                wp_reset_postdata();
-            else :
-                echo '<h2 class"jua text-center">No posts found.</h2>';
-            endif;
+        <?php endif; 
+        endwhile;
+            wp_reset_postdata();
+        else :
+            echo '<h2 class"jua text-center">No posts found.</h2>';
+        endif;
         ?>
     </div>
-        <div class="at--centered_container">
-            <a href="">
-                <button class="mplusr1c at--button__join">Previous</button>
-            </a>
-            <a href="">
-                <button class="mplusr1c at--button__join">Next</button>
-            </a>
-        </div>
+    <div class="at--centered_container">
+        <a href="http://artxtellier.local/explore">
+            <button class="jua at--button__join">More!</button>
+        </a>
+    </div>
+
 </div>

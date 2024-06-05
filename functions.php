@@ -66,7 +66,7 @@ add_action( 'after_setup_theme', 'logo_sitio' );
 /*Anadir clase a body en ciertas paginas cortas de contenido para 
 situar el footer en la parte de abajo de la pantalla*/
 function clase_body( $clase ){
-  if (is_404() || is_page_template( 'template-information.php' )){
+  if (is_404() || is_search() || is_page_template( 'template-information.php' ) ){
     $clase[] = 'at--information__body';
   }
   return $clase;
@@ -98,5 +98,7 @@ if (! function_exists('fa_custom_setup_kit') ) {
     }
   }
 fa_custom_setup_kit('https://kit.fontawesome.com/9416b52d54.js'); 
+
+
 
 ?>

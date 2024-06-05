@@ -57,12 +57,36 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
 }
 
 .at--centered_column{
     padding: 70px 400px;
+}
+
+.at--pagination{    
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+    margin-bottom: 10px;
+
+}
+
+.at--pagination__button{
+    align-items: center;
+    justify-content: center;
+    height: 38px;
+    width: 110px;
+    background-color: var(--palette-main-color);
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    box-shadow: 4px 3px 0px #000;
+}
+
+.at--pagination__button:hover{
+    background-color: var(--palette-secondary-color);
 }
 
 
@@ -83,6 +107,12 @@ Fuentes
 .mplusr1c{
     font-family: "M PLUS Rounded 1c", sans-serif;
     font-weight: 700;
+    font-style: normal;
+}
+
+.mplusr1c-light{
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 400;
     font-style: normal;
 }
 
@@ -184,6 +214,11 @@ Header
 }
 
 .at--button__header a{
+    text-decoration: none;
+    color:#4f4f4f;
+}
+
+.at--button__header p{
     text-decoration: none;
     color:#4f4f4f;
 }
@@ -360,10 +395,11 @@ Front-page, Latest, Explore, Search
 }
 
 .at--button__join{
+    align-items: center;
     justify-content: center;
-    margin-top: 20px;
-    height: 38px;
-    width: 110px;
+    font-size: 24px;
+    height: 58px;
+    width: 140px;
     background-color: var(--palette-main-color);
     border-radius: 10px;
     border: none;
@@ -374,6 +410,7 @@ Front-page, Latest, Explore, Search
 .at--button__join:hover{
     background-color: var(--palette-secondary-color);
 }
+
 
 /*
 ----------------
@@ -394,8 +431,15 @@ Single.php (posts)
     align-items: baseline;
     padding: 0;
 }
+
 .at--posttitle p{
     margin-left: 10px;
+    color: #4f4f4f;
+}
+
+.at--posttitle p a{
+    text-decoration: none;
+    color: var(--palette-main-color);
 }
 
 .at--postimage__container{
@@ -421,11 +465,22 @@ Single.php (posts)
     height: 50%;
 }
 
+.at--fav{
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 24px;
+    text-shadow:2px 1px 0px #000;
+}
+
 /*
 Author.php
 */
 
 .at--profile-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     height: 325px;
     background-color: var(--palette-secondary-color);
     margin-top: 0;
@@ -434,14 +489,27 @@ Author.php
 
 .at--profile-header__content{    
     display: flex;
-    width: 55%;
     align-items: center;
     justify-content: center;
-    gap: 50px;
+    width: 55%;
+    gap:50px;
 }
 
 .at--profile-header__info{
     display: block;
     width: 50%;
-    height: 50%;
+    height: 100%;
+}
+
+.at--profile-header__avatar img{
+    border-radius: 10px;
+}
+
+.at--profile-header__info p a{
+    text-decoration: none;
+    color:#4f4f4f;
+}
+.at--profile-header__info p a:hover{
+    text-decoration: none;
+    color:#fff;
 }

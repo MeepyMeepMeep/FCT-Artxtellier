@@ -1,41 +1,44 @@
 <!-- Plantilla que se visualizará a la hora de mostrar resultados de búsqueda. -->
 
-<?php get_header();
+<?php 
+    get_header();
 
-$search_query = get_search_query();
-if ($search_query):
+    $search_query = get_search_query();
+    if ( $search_query ):
 ?>
 
 
-<div class="at--centered_container">
-    
+<div class="at--centered__container">
     <div class="at--search__container">
-        <h2 class="jua text-center"> Search results for "<?php echo $search_query?>"</h2>
+        <h2 class="jua text-center"> Search results for "<?php echo $search_query ?>"</h2>
         <h2 class="jua">Users</h2>
         <hr>
 
         <div class="at--search__grid">
             <?php
-            $user_args = array(
-                'search' => '*' . esc_attr($search_query) . '*',
-                'search_columns' => array('display_name', 'user_nicename'),
-                'number' => 24,
-            );
+                $user_args = array(
+                    'search' => '*' . esc_attr( $search_query ) . '*',
+                    'search_columns' => array('display_name', 'user_nicename'),
+                    'number' => 15,
+                );
 
-            $users_query = new WP_User_Query($user_args);
+                $users_query = new WP_User_Query( $user_args );
 
-            if (!empty($users_query->get_results())) :
-                foreach ($users_query->get_results() as $user) :?>
-                    <div class="at--search__miniatura">
-                        <a href="<?php echo get_author_posts_url($user->ID); ?>">
-                            <?php echo get_avatar($user->ID, 200);?>
-                        </a>
-                    </div>
-                <?php
-                endforeach;
-                else :
-                    echo '<p>No users found.</p>';
-            endif;
+                if ( !empty( $users_query->get_results() ) ):
+                    foreach ( $users_query->get_results() as $user ): ?>
+                        <div class="at--search__thumbnail">
+                            <a href="<?php echo get_author_posts_url( $user->ID ); ?>">
+                                <?php echo get_avatar( $user->ID, 250 );?>
+                                <div class="jua at--author__overlay">
+                                    <?php echo get_the_author_nickname( $user->ID ); ?>
+                                </div>  
+                            </a>
+                        </div>
+                    <?php
+                    endforeach;
+                    else :
+                        echo '<p class="mplusr1c">No users found.</p>';
+                endif;
             ?>
         </div>
         <h2 class="jua">Artworks</h2>
@@ -46,7 +49,7 @@ if ($search_query):
             $artwork_args = array(
                 's' => $search_query,
                 'post_type' => 'post',
-                'posts_per_page' => 12,
+                'posts_per_page' => 15,
             );
 
             $artworks_query = new WP_Query($artwork_args);
@@ -57,7 +60,7 @@ if ($search_query):
                     $title = get_the_title();
 
                     if(has_post_thumbnail()):?>
-                        <div class="at--search__miniatura">
+                        <div class="at--search__thumbnail">
                             <a href="<?php the_permalink(); ?>">
                                 <?php echo $image ?>
                             </a>
@@ -70,15 +73,15 @@ if ($search_query):
                 <?php
                 wp_reset_postdata();
                 else :
-                echo '<p>No artworks found.</p>';
+                echo '<p class="mplusr1c">No artworks found.</p>';
             endif;
             ?>
         </div>
     </div>
-<?php
-else:
-    echo '<h2 class="jua text-center">Please enter a valid search term.</h2>';
-endif;?>
+    <?php
+    else:
+        echo '<h2 class="jua text-center">Please enter a valid search term.</h2>';
+    endif;?>
 </div>
 
 <?php get_footer();?>

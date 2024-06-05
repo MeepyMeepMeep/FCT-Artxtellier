@@ -1,7 +1,9 @@
 <!-- Punto de partida del tema. -->
 
-<?php get_header();?>
+<?php 
+    get_header();
 
+    get_template_part( 'sections/section', 'fploggedout' );
 
-
-<?php get_footer(); ?>
+    get_footer(); 
+?>

@@ -5,6 +5,10 @@ Hoja de estilos para personalizar la pagina de acceso/registro
 @import url('https://fonts.googleapis.com/css2?family=Jua&family=M+PLUS+Rounded+1c&display=swap');
 
 
+.login .message{
+    border-left: 4px solid var(--palette-main-color);
+}
+
 body.login{
     background-color: var(--palette-secondary-color);
     font-family: "M PLUS Rounded 1c", sans-serif;
@@ -14,6 +18,7 @@ body.login{
 
 input#user_login:focus,
 input#user_pass:focus{
+    border-color: var(--palette-main-color);
     outline-color: var(--palette-main-color);
 }
 
@@ -32,18 +37,18 @@ body.login input#wp-submit:hover{
     box-shadow:3px 2px 0px #000;
 }
 
-body.login div#login p#backtoblog a {
+body.login div#login p#backtoblog a{
     display: none;
 }
 
 .login #backtoblog a:hover, 
 .login #nav a:hover, 
-.login h1 a:hover {
+.login h1 a:hover{
     color: #fff;
 }
 .login #backtoblog a, 
 .login #nav a, 
-.login h1 a {
+.login h1 a{
     color: #3C434A;
 }
 

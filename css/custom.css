@@ -27,12 +27,6 @@ Generales
 }
 
 
-:root {
-    --main-font-color: #000;
-    --secondary-font-color: #fff;
-    --tertiary-font-color: #4f4f4f;
-}
-
 .at--information__body{
     display: flex;
     flex-direction: column;
@@ -53,14 +47,14 @@ footer{
     margin-top: auto;
 }
 
-.at--centered_container{
+.at--centered__container{
     margin-top: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.at--centered_column{
+.at--centered__column{
     padding: 70px 400px;
 }
 
@@ -156,16 +150,16 @@ Header
     margin-left: auto;
 }
 
-.at--account_link{
+.at--account__link{
     margin-left: 20px;
     text-decoration: none;
     font-size: 24px;
-    color: var(--secondary-font-color);
+    color: #fff;
     text-shadow:2px 1px 0px #000;
 
 }
 
-.at--headernav{
+.at--header__nav{
     display: flex;
     flex-wrap: wrap;
     list-style-type: none;
@@ -174,16 +168,16 @@ Header
     padding: 0;
 }
 
-.at--headernav li a{
+.at--header__nav li a{
     text-decoration: none;
     margin-right: 20px;
     font-size: 24px;
-    color: var(--secondary-font-color);
+    color: #fff;
     text-shadow:2px 1px 0px #000;
 }
 
-.at--headernav li a:hover{
-    color: var(--main-font-color);
+.at--header__nav li a:hover{
+    color: #000;
     text-shadow:2px 1px 0px #fff;
 }
 
@@ -193,7 +187,7 @@ Header
     width: 244px;
     padding-left: 20px;
     padding-right: 20px;
-    background-color: var(--secondary-font-color);
+    background-color: #fff;
     border-radius: 10px;
     box-shadow: 4px 3px 0px #000;
     border: solid 1px #fff;
@@ -204,28 +198,28 @@ Header
 }
 
 
-.at--button__header{
+.at--header__button{
     margin-left: 20px;
     height: 38px;
     width: 110px;
-    background-color: var(--secondary-font-color);
+    background-color: #fff;
     border-radius: 10px;
     border: none;
     box-shadow: 4px 3px 0px #000;
 }
 
-.at--button__header a{
+.at--header__button a{
     text-decoration: none;
     color:#4f4f4f;
 }
 
-.at--button__header p{
+.at--header__button p{
     text-decoration: none;
     color:#4f4f4f;
 }
 
 
-.at--button__header:hover{
+.at--header__button:hover{
     background-color: var(--palette-tertiary-color);
     box-shadow: 4px 3px 0px #000;
     color:#000;
@@ -264,25 +258,25 @@ Footer
     margin-bottom: 10px;
 }
 
-.at--footernav{
+.at--footer__nav{
     display: block;
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-.at--footernav li a{
+.at--footer__nav li a{
     text-decoration: none;
     margin-right: 20px;
     font-size: 16px;
-    color: var(--secondary-font-color);
+    color: #fff;
     text-shadow:2px 1px 0px #000;
     margin: 0;
     padding: 0;
 }
 
-.at--footernav li a:hover{
-    color: var(--main-font-color);
+.at--footer__nav li a:hover{
+    color: #000;
     text-shadow:2px 1px 0px #fff;
 }
 
@@ -314,13 +308,13 @@ Footer
 ----------------
 */
 
-.at--404img{
+.at--404__img{
     height: 277px;
     width: 277px;
     margin-right: 120px;
 }
 
-.at--404text{
+.at--404__text{
     display: block;
 }
 
@@ -345,7 +339,7 @@ Front-page, Latest, Explore, Search
     margin: 35px 30px 30px 30px;
 }
 
-.at--grid{
+.at--grid__container{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     justify-items: center;
@@ -355,14 +349,14 @@ Front-page, Latest, Explore, Search
     margin-bottom: 45px;
 }
 
-.at--miniatura img{
+.at--thumbnail img{
     width: 350px;
     height: 350px;
     object-fit: cover;
     border-radius: 10px;
 }
 
-.at--miniatura img:hover{
+.at--thumbnail img:hover{
     border-radius: 10px;
     box-shadow: 4px 4px 2px #4f4f4f;
     transition: 0.2s;
@@ -389,13 +383,13 @@ Front-page, Latest, Explore, Search
 
 }
 
-.at--miniatura:hover .at--author__overlay p{
+.at--thumbnail:hover .at--author__overlay p{
     opacity: 1;
     transition: 0.2s;
 
 }
 
-.at--button__join{
+.at--join__button{
     align-items: center;
     justify-content: center;
     font-size: 24px;
@@ -408,7 +402,7 @@ Front-page, Latest, Explore, Search
     box-shadow: 4px 3px 0px #000;
 }
 
-.at--button__join:hover{
+.at--join__button:hover{
     background-color: var(--palette-secondary-color);
 }
 
@@ -427,23 +421,23 @@ Single.php (posts)
     gap: 50px;
 }
 
-.at--posttitle{
+.at--post__title{
     display: flex;
     align-items: baseline;
     padding: 0;
 }
 
-.at--posttitle p{
+.at--post__title p{
     margin-left: 10px;
     color: #4f4f4f;
 }
 
-.at--posttitle p a{
+.at--post__title p a{
     text-decoration: none;
     color: var(--palette-main-color);
 }
 
-.at--postimage__container{
+.at--post-image__container{
     width: 850px;
     height: 850px;
     overflow: hidden;    
@@ -453,14 +447,14 @@ Single.php (posts)
 
 }
 
-.at--postimage__container img{
+.at--post-image__container img{
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
     border-radius: 10px;
 }
 
-.at--postcontent__container{
+.at--post-content__container{
     display: block;
     width: 50%;
     height: 50%;
@@ -474,7 +468,9 @@ Single.php (posts)
 }
 
 /*
+----------------
 Author.php
+----------------
 */
 
 .at--profile-header{
@@ -510,25 +506,25 @@ Author.php
     text-decoration: none;
     color:#4f4f4f;
 }
+
 .at--profile-header__info p a:hover{
     text-decoration: none;
     color:#fff;
 }
 
 /*
-
+----------------
 Search.php
-
+----------------
 */
 
 .at--search__container{
-
     width: 80%;
 }
 
 .at--search__grid{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     justify-items: center;
     align-items: center;
     gap: 40px;
@@ -536,14 +532,14 @@ Search.php
     margin-bottom: 45px;
 }
 
-.at--search__miniatura img{
-    width: 200px;
-    height: 200px;
+.at--search__thumbnail img{
+    width: 250px;
+    height: 250px;
     object-fit: cover;
     border-radius: 10px;
 }
 
-.at--search__miniatura img:hover{
+.at--search__thumbnail img:hover{
     border-radius: 10px;
     box-shadow: 4px 4px 2px #4f4f4f;
     transition: 0.2s;

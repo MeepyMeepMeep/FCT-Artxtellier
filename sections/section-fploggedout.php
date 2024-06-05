@@ -11,13 +11,13 @@
         Join our growing artistic community now!
     </h1>
 
-    <div class="at--centered_container">
-        <a href="http://artxtellier.local/access/?action=register/">
-            <button class="jua at--button__join">Join now!</button>
+    <div class="at--centered__container">
+        <a href="http://artxtellier.local/access/?action=register">
+            <button class="jua at--join__button">Join now!</button>
         </a>
     </div>
 
-    <div class="at--grid">
+    <div class="at--grid__container">
         <?php 
             /* Creamos un filtro para pasarlo a un WP_Query*/
             $posts = array(
@@ -28,22 +28,22 @@
                 'order' => 'DESC',
             );
 
-            $posts_recientes = new WP_Query($posts);
+            $latest_posts = new WP_Query( $posts );
 
-            if ($posts_recientes -> have_posts()):
-                while ($posts_recientes -> have_posts()): $posts_recientes ->the_post();
+            if ( $latest_posts -> have_posts() ):
+                while ( $latest_posts -> have_posts() ): $latest_posts ->the_post();
 
-                $image = get_the_post_thumbnail(get_the_ID(), 'large');
+                $image = get_the_post_thumbnail( get_the_ID(), 'large' );
                 $title = get_the_title();
 
         ?>
         
-        <?php if(has_post_thumbnail()):?>
-            <div class="at--miniatura">
+        <?php if( has_post_thumbnail() ): ?>
+            <div class="at--thumbnail">
                 <a href="<?php the_permalink(); ?>">
                     <?php echo $image ?>
                     <div class="jua at--author__overlay">
-                        <p> <?php echo get_the_author() ?> </p>
+                        <p> <?php echo get_the_author(); ?> </p>
                     </div>               
                 </a>
             </div>
@@ -53,7 +53,7 @@
             endwhile;
                 wp_reset_postdata();
             else :
-                echo '<h2 class"jua text-center">No posts found.</h2>';
+                echo '<p class="mplusr1c text-center">No posts found.</p>';
             endif;
         ?>
     </div>

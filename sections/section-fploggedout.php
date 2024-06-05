@@ -12,7 +12,7 @@
     </h1>
 
     <div class="at--centered__container">
-        <a href="http://artxtellier.local/access/?action=register">
+        <a href="https://artxtellier.com/access/?action=register">
             <button class="jua at--join__button">Join now!</button>
         </a>
     </div>

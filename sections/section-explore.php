@@ -46,7 +46,7 @@
         ?>
     </div>
     <div class="at--centered__container">
-        <a href="http://artxtellier.local/explore">
+        <a href="https://artxtellier.com/explore">
             <button class="jua at--join__button">More!</button>
         </a>
     </div>

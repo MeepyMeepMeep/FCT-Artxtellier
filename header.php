@@ -45,7 +45,7 @@
             <a href="<?php echo wp_logout_url( home_url() ); ?>" class="at--account__link">
                 <i class="fa-solid fa-right-from-bracket"></i>
             </a>
-            <a href="http://artxtellier.local/wp-admin/post-new.php">
+            <a href="https://artxtellier.com/wp-admin/post-new.php">
                 <button type="button" class="at--header__button mplusr1c">Upload <i class="fa-solid fa-plus"></i></button>
             </a> 
         </div>
@@ -53,7 +53,7 @@
             else: 
         ?>
         <div class="at--account__container">    
-            <a href="http://artxtellier.local/access">
+            <a href="https://artxtellier.com/access">
                 <button type="button" class="at--header__button mplusr1c">Access</button>
             </a>
         </div>

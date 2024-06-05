@@ -5,8 +5,11 @@
 
 
 <?php
-    if ( have_posts() ) :
-            while ( have_posts() ) : the_post();
+    $logged_user = wp_get_current_user();
+    $current_post_author_id = get_the_author_meta('ID');
+
+    if (have_posts()) :
+            while (have_posts()) : the_post();
                 $image = get_the_post_thumbnail_url();
                 $title = get_the_title();
                 $description = get_the_content();
@@ -21,6 +24,9 @@
                     <img src="<?php echo $image ?>" alt="Image of <?php echo $title ?>"></img>
                 </div>
                 <div class="at--postcontent__container">
+                    <?php if (function_exists('get_favorites_button')):
+                        echo get_favorites_button();
+                    endif;?>
                     <div class="at--posttitle">
                         <h2><?php echo $title ?></h2>
                         <p class="mplusr1c"> by <?php echo $author_url?></a></p>
@@ -33,9 +39,9 @@
             </div>
         </div>  
 
-<?php
+            <?php
             endwhile;
-    endif;
+endif;
 ?>
 
 

@@ -5,7 +5,7 @@
     <img src="<?php echo get_template_directory_uri(  )?>/img/artxtellier-logo-full.png" 
     alt="Artxtellier logo." class="at--info__logo d-block mx-auto">
 
-    <h1 class="jua text-center mt-3">
+    <h1 class="jua text-center mt-4 mb-4">
         An explosion of creativity not seen elsewhere.
         <br>
         Join our growing artistic community now!

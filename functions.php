@@ -65,7 +65,7 @@ add_action( 'after_setup_theme', 'site_logo' );
 /*Anadir clase a body en ciertas paginas cortas de contenido para 
 situar el footer en la parte de abajo de la pantalla*/
 function body_classes( $class ){
-  if (is_404() || is_search() || is_page_template( 'template-information.php' ) ){
+  if (is_404() || is_search() || is_front_page() && !have_posts() || is_page_template( 'template-information.php', 'template-explore.php' ) ){
     $class[] = 'at--information__body';
   }
   return $class;

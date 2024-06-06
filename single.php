@@ -34,7 +34,7 @@
                 <hr>
                 <p class="mplusr1c"><?php echo $description ?></p>
                 <hr>
-                <p class="mplusr1c"><?php echo $date ?></p>
+                <p class="mplusr1c"><?php echo $date ?> <?php edit_post_link(('Edit')); ?></p>
             </div>
         </div>
     </div>  
